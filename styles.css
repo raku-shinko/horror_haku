@@ -1,0 +1,73 @@
+/* 全局設定 */
+*,
+*::before,
+*::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Creepster', cursive;
+  text-align: center;
+}
+
+/* 進入頁面 */
+#title {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #ff0000, 0 0 16px #7a0000;
+}
+
+#warning {
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+  margin-top: 1.2rem;
+}
+
+/* 紅色箭頭按鈕 */
+#enterBtn {
+  margin-top: 2rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  background: transparent;
+  border: 2px solid #ff0000;
+  color: #ff0000;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s;
+}
+
+#enterBtn i { margin-left: 0.5rem; }
+
+#enterBtn:hover {
+  background: #ff0000;
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* 倒數字體 */
+.count-num {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  color: #ff0000;
+  font-family: 'Creepster', cursive;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* 鬼臉螢幕置中 */
+#ghost{
+  position: fixed;
+  top: 50%;                 /* 先把元素左上角推到視窗中心點 */
+  left: 50%;
+  transform: translate(-50%, -50%); /* 再往回移半個自身寬高 → 真正置中 */
+  width: 50%;               /* 讓鬼臉寬度佔螢幕 50 % */
+  height: auto;             /* 高度隨比例自動調整 */
+  object-fit: contain;      /* 若你仍想使用 object‑fit，改用 contain 才不會裁切影像 */
+}
