@@ -10,7 +10,7 @@ const ctx   = new (window.AudioContext || window.webkitAudioContext)();
 const source = ctx.createMediaElementSource(scream);
 // 建立 GainNode 放大音量
 const gainNode = ctx.createGain();
-gainNode.gain.value = 5;   // 200 %，視需要
+gainNode.gain.value = 3.5;   // 200 %，視需要
 // 5) 串接：source ➜ gain ➜ destination
 source.connect(gainNode).connect(ctx.destination);
 
